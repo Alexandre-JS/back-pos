@@ -2,12 +2,11 @@
 app = "back-pos"
 
 [env]
-DB_HOST = "dpg-d2b190ogjchc73eqn9dg-a"
-DB_PORT = "5432"
-DB_USER = "farmaciapos_user"
-DB_PASS = "wLAiKFfvhnbptgOB4xdFLpSOPvl4oMuN"
-DB_NAME = "farmaciapos"
-
+DB_HOST=dpg-d2b190ogjchc73eqn9dg-a
+DB_PORT=5432
+DB_USER=farmaciapos_user
+DB_PASS=wLAiKFfvhnbptgOB4xdFLpSOPvl4oMuN
+DB_NAME=farmaciapos
 [build]
   image = ""
 
