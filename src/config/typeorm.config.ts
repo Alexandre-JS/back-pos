@@ -1,10 +1,12 @@
 import { ConnectionOptions } from 'typeorm';
-// Importa apenas opções genéricas se necessário
-// import { databaseConfig } from './database';
 
 export const typeOrmConfig: ConnectionOptions = {
-  type: 'sqlite',
-  database: 'database.sqlite',
+  type: 'postgres',
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 5432,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-  synchronize: true, // ou false em produção
+  synchronize: false, // recomendado false em produção
 };

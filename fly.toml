@@ -1,0 +1,28 @@
+# fly.toml - configuração básica para NestJS com PostgreSQL
+app = "back-pos"
+
+[env]
+DB_HOST = "<host_do_postgres>"
+DB_PORT = "5432"
+DB_USER = "<usuario_do_postgres>"
+DB_PASS = "<senha_do_postgres>"
+DB_NAME = "<nome_do_banco>"
+
+[build]
+  image = ""
+
+[experimental]
+  allowed_public_ports = [8080]
+  auto_rollback = true
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
