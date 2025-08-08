@@ -2,11 +2,11 @@
 app = "back-pos"
 
 [env]
-DB_HOST = "<host_do_postgres>"
+DB_HOST = "dpg-d2b190ogjchc73eqn9dg-a"
 DB_PORT = "5432"
-DB_USER = "<usuario_do_postgres>"
-DB_PASS = "<senha_do_postgres>"
-DB_NAME = "<nome_do_banco>"
+DB_USER = "farmaciapos_user"
+DB_PASS = "wLAiKFfvhnbptgOB4xdFLpSOPvl4oMuN"
+DB_NAME = "farmaciapos"
 
 [build]
   image = ""
